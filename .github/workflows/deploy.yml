@@ -27,6 +27,7 @@ jobs:
             echo "=========================================================="
             echo "🚀 Starting Automated Deployment on Cloud Server..."
             echo "=========================================================="
+            
             echo "Stopping old containers to free up ports..."
             if [ "$(sudo docker ps -q)" ]; then
               sudo docker stop $(sudo docker ps -q)
