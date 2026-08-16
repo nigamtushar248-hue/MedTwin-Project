@@ -5,19 +5,35 @@
 
 ---
 
-## 📸 Project Screenshots
+## Omni_BioTech_10 Alignment
 
-*(Please upload and add your screenshots here)*
+MedTwin addresses the challenge of continuous specialist care for
+rural and remote chronic-care patients.
 
-- **Patient Dashboard**: `[Insert Screenshot Here]`
-- **Doctor Verification Queue**: `[Insert Screenshot Here]`
-- **AI Upload & Analysis**: `[Insert Screenshot Here]`
-- **Blockchain Verification**: `[Insert Screenshot Here]`
+Patient
+↓
+Medical Reports / Symptoms / Vitals
+↓
+Persistent Digital Twin
+↓
+AI Analysis
+↓
+Structured Specialist Brief
+↓
+Remote Specialist Review
+↓
+Doctor-Approved Care Plan
+↓
+Continuous Monitoring
+↓
+Digital Twin Update
+↓
+Follow-up
 
 ---
 
 ## 🚨 The Problem
-Healthcare data today is heavily fragmented, reactive, and vulnerable to tampering. 
+Rural chronic-care patients struggle to maintain consistent specialist follow-up because their medical history, reports, and health changes remain fragmented across consultations.
 1. **Doctors** suffer from alert fatigue and lack unified, actionable patient insights. 
 2. **Patients** do not have a real-time, holistic view of their health trajectory.
 3. **Data Security** is often compromised, with medical records lacking auditable, tamper-proof history.
