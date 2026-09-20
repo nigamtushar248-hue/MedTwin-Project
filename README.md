@@ -42,33 +42,100 @@ Medical records require absolute immutability. Our EVM Smart Contract (`MedTwinT
 
 ---
 
-## 🏗️ System Architecture
+🛠️ Complete Technology Stack
+Frontend
+React 18 — Interactive Patient, Doctor & Admin portals
+Vite — Frontend build and development environment
+Tailwind CSS — Responsive UI and Glassmorphism-based design
+Recharts — Health-score, risk-trajectory and longitudinal data visualization
+Backend
+Python 3.11+
+FastAPI — High-performance REST API layer
+SQLAlchemy — ORM and database management
+JWT Authentication — Secure role-based authentication and authorization
+REST APIs — Communication between frontend, AI services and backend
+Database & Data Layer
+PostgreSQL — Persistent storage for users, medical records, reports, symptoms and Digital Twin state
+Vector Database — Semantic retrieval of clinically relevant symptom patterns and laboratory investigations
+Structured JSON Health State — Maintains the patient's continuously updated Digital Twin
+AI / ML Layer
+LangGraph — Stateful Multi-Agent AI orchestration
+LLMs (Groq / OpenAI APIs) — Medical information analysis and agent reasoning
+Lightweight Transformer Model — Generates semantic embeddings from user-entered symptoms
+Semantic Vector Search — Matches symptoms against relevant clinical patterns and laboratory investigations
+PaddleOCR / Tesseract OCR — Extracts information from uploaded medical reports
+Multi-Agent AI Pipeline — Specialized agents analyze different aspects of the patient's health
+5 Specialized AI Agents
+Medical Report Agent — Extracts and structures laboratory values from medical reports.
+Health Prediction Agent — Analyzes health data and identifies changes in risk/trends.
+Medication Agent — Analyzes prescriptions and potential medication-related conflicts.
+Lifestyle Agent — Generates personalized lifestyle insights based on the patient's health state.
+Emergency Agent — Detects potentially critical patterns and triggers appropriate alerts.
+Symptom Investigation Engine
+Transformer-based embeddings convert free-text symptoms into numerical representations.
+Vector similarity search identifies the closest relevant clinical patterns.
+Semantic matching connects symptoms with potentially relevant laboratory investigations.
+Relevance scoring indicates how closely the user's symptoms match indexed patterns.
+Urgency classification highlights potentially concerning symptom combinations.
+Designed as an assistive investigation-recommendation system, not a diagnostic tool.
+Blockchain & Trust Layer
+Polygon Amoy Testnet — Immutable audit trail
+Solidity — Smart contract development
+Hardhat — Smart contract development and testing
+Ethers.js / Web3 — Blockchain interaction
+SHA-256 — Cryptographic hashing of medical events
+MedTwinTrust.sol — Stores hashes and doctor approval records on-chain
+Hash Verification — Detects whether an off-chain medical record has been altered
+Infrastructure & DevOps
+Docker — Containerized application deployment
+Docker Compose — Multi-service local orchestration
+AWS EC2 — Cloud deployment
+Git & GitHub — Version control and collaboration
+Overall Architecture
+                    ┌──────────────────────────────┐
+                    │        REACT FRONTEND        │
+                    │ Patient | Doctor | Admin UI  │
+                    └──────────────┬───────────────┘
+                                   │
+                              REST APIs
+                                   │
+                                   ▼
+                    ┌──────────────────────────────┐
+                    │       FASTAPI BACKEND        │
+                    │ Auth | APIs | Orchestration  │
+                    └───────┬───────────┬──────────┘
+                            │           │
+                ┌───────────┘           └────────────┐
+                ▼                                    ▼
+      ┌──────────────────┐                 ┌──────────────────┐
+      │    LANGGRAPH     │                 │   POSTGRESQL     │
+      │  Multi-Agent AI  │                 │ Patient Health   │
+      │                  │                 │ Digital Twin     │
+      │ 5 Specialized    │                 └──────────────────┘
+      │ AI Agents        │
+      └────────┬─────────┘
+               │
+       ┌───────┴────────┐
+       ▼                ▼
+┌──────────────┐  ┌──────────────────┐
+│ Transformer  │  │   Vector DB      │
+│ Embeddings   │  │ Semantic Search  │
+└──────────────┘  └──────────────────┘
+               │
+               ▼
+      Symptom → Clinical
+      Pattern → Test
+      Recommendation
 
-```text
-+-----------------------------------------------------------------------------------+
-|                            REACT + TAILWIND CSS (Frontend)                        |
-|                     Patient Dashboard | Doctor Portal | Admin UI                  |
-+-----------------------------------------------------------------------------------+
-                                         | REST API (JWT Auth)
-                                         v
-+-----------------------------------------------------------------------------------+
-|                               FASTAPI (Python Backend)                            |
-|                 Auth | Routing | ORM | Service Orchestration Layer                |
-+-----------------------------------------------------------------------------------+
-         |                               |                               |
-         v (Task Invocation)             v (PostgreSQL/IPFS)             v (Ethers/Web3)
-+-------------------------+     +-------------------------+     +-------------------------+
-|     LANGGRAPH AI/ML     |     |       DATA LAYER        |     |     POLYGON BLOCKCHAIN  |
-| 5 Specialized AI Agents |     | ACID-Compliant Postgres |     | Immutable Audit Trail   |
-+-------------------------+     +-------------------------+     +-------------------------+
-```
-
-## 🛠️ Complete Technology Stack
-* **Frontend**: React 18, Vite, Tailwind CSS (Glassmorphism), Recharts.
-* **Backend**: Python 3.11+, FastAPI, SQLAlchemy, PostgreSQL.
-* **AI/ML Layer**: LangGraph, Groq/OpenAI LLMs, PaddleOCR / Tesseract.
-* **Blockchain Layer**: Polygon (Amoy Testnet), Solidity, Hardhat, Ethers.js.
-* **Infrastructure**: Docker & Docker Compose / AWS EC2.
+               +
+               │
+               ▼
+      ┌──────────────────┐
+      │ POLYGON BLOCKCHAIN│
+      │   Trust Layer     │
+      │ SHA-256 Hashes    │
+      │ Doctor Sign-offs  │
+      └──────────────────┘
 
 ---
 
