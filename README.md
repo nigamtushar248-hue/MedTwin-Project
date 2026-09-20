@@ -2,17 +2,11 @@
 
 > **MedTwin AI** is a persistent, continuously updated virtual model of a patient's medical state, powered by **Multi-Agent AI orchestration (LangGraph)** and secured by an **Immutable Blockchain Layer (Polygon)**.
 
-## 🚀 Live Links
-- 🌐 **Deployed Application**: [http://13.239.27.137:5173/](http://13.239.27.137:5173/)
-- 🎥 **Demo Video**: [Watch on Google Drive](https://drive.google.com/file/d/1znYWZfhEb8mg85E34yCqPQnXe18clQU-/view?usp=sharing)
-
----
-
-## 🚨 Problem Statement
-Healthcare data today is heavily fragmented, reactive, and vulnerable to tampering. 
-1. **Doctors** suffer from alert fatigue and lack unified, actionable patient insights due to manual chart reviews. 
-2. **Patients** do not have a real-time, holistic view of their health trajectory and risk factors.
-3. **Data Security** is compromised, with medical records lacking auditable, tamper-proof history, leading to privacy breaches and lack of trust.
+## 🚨 The Problem
+Rural chronic-care patients struggle to maintain consistent specialist follow-up because their medical history, reports, and health changes remain fragmented across consultations.
+1. **Doctors** suffer from alert fatigue and lack unified, actionable patient insights. 
+2. **Patients** do not have a real-time, holistic view of their health trajectory.
+3. **Data Security** is often compromised, with medical records lacking auditable, tamper-proof history.
 
 ## 💡 Our Solution
 **MedTwin AI** acts as a true **Digital Twin** for patients. Instead of generic LLM chatbots, we utilize an **explicit, stateful Multi-Agent Pipeline (LangGraph)** that continuously digests new physical lab reports, prescriptions, and wearable vitals to dynamically update the patient's health state. 
