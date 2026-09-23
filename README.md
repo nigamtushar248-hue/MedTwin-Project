@@ -2,6 +2,8 @@
 
 > **MedTwin AI** is a persistent, continuously updated virtual model of a patient's medical state, powered by **Multi-Agent AI orchestration (LangGraph)** and secured by an **Immutable Blockchain Layer (Polygon)**.
 
+🌐 **Live Deployment URL:** [http://13.239.27.137:5173/](http://13.239.27.137:5173/)
+
 ## 🚨 The Problem
 Rural chronic-care patients struggle to maintain consistent specialist follow-up because their medical history, reports, and health changes remain fragmented across consultations.
 1. **Doctors** suffer from alert fatigue and lack unified, actionable patient insights. 
