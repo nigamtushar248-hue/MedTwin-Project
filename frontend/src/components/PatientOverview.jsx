@@ -73,7 +73,7 @@ export default function PatientOverview({ user, result, recStatus, reportId }) {
     : 'Awaiting upload';
 
   return (
-    <div className="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-5">
+    <div className="bg-slate-100/60 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-5 sm:p-6 shadow-md space-y-5">
       {/* Header Banner */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-100 pb-4 relative z-50">
         <div className="flex-shrink-0">
@@ -107,7 +107,7 @@ export default function PatientOverview({ user, result, recStatus, reportId }) {
       {/* Compact Health Snapshot Bar */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 relative z-10">
         {/* Health Status */}
-        <div className="bg-slate-50/70 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
+        <div className="bg-white/60 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Health Status</span>
             <Activity className="w-4 h-4 text-sky-500" />
@@ -121,7 +121,7 @@ export default function PatientOverview({ user, result, recStatus, reportId }) {
         </div>
 
         {/* Current Risk */}
-        <div className="bg-slate-50/70 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
+        <div className="bg-white/60 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Risk Level</span>
             <TrendingUp className="w-4 h-4 text-sky-500" />
@@ -137,7 +137,7 @@ export default function PatientOverview({ user, result, recStatus, reportId }) {
         </div>
 
         {/* Latest Report */}
-        <div className="bg-slate-50/70 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
+        <div className="bg-white/60 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Reports</span>
             <FileText className="w-4 h-4 text-sky-500" />
@@ -151,7 +151,7 @@ export default function PatientOverview({ user, result, recStatus, reportId }) {
         </div>
 
         {/* Doctor Review */}
-        <div className="bg-slate-50/70 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
+        <div className="bg-white/60 border border-slate-200/60 rounded-xl p-3.5 space-y-1 medtwin-hover-glow transition-all">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Doctor Review</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-500" />

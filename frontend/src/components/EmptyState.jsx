@@ -18,7 +18,7 @@ export default function EmptyState({ onResult, onBlockchainData }) {
   return (
     <div className="space-y-6">
       {/* Hero Empty Banner */}
-      <div className="bg-gradient-to-b from-white to-sky-50/40 border border-slate-200/80 rounded-2xl p-6 sm:p-8 text-center shadow-xs space-y-6 medtwin-hover-glow transition-all">
+      <div className="bg-slate-100/60 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-6 sm:p-8 text-center shadow-md space-y-6 medtwin-hover-glow transition-all">
         <div className="w-16 h-16 rounded-2xl bg-sky-500/10 border border-sky-200 text-sky-600 flex items-center justify-center mx-auto shadow-xs">
           <Sparkles className="w-8 h-8 text-sky-500 animate-pulse" />
         </div>
@@ -45,7 +45,7 @@ export default function EmptyState({ onResult, onBlockchainData }) {
       </div>
 
       {/* What MedTwin Analyzes Section */}
-      <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xs space-y-4">
+      <div className="bg-slate-100/60 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-6 shadow-md space-y-4">
         <div className="border-b border-slate-100 pb-3 flex items-center justify-between">
           <div>
             <h3 className="text-base font-bold text-slate-900">What MedTwin Analyzes</h3>
@@ -60,7 +60,7 @@ export default function EmptyState({ onResult, onBlockchainData }) {
           {agents.map((agent, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-xl border border-slate-200/70 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-xs transition-all space-y-1.5 medtwin-hover-glow"
+              className="p-4 rounded-xl border border-white/60 bg-white/60 hover:bg-white/90 backdrop-blur-sm hover:border-sky-300 hover:shadow-xs transition-all space-y-1.5 medtwin-hover-glow"
             >
               <div className="flex items-center gap-2">
                 <span className="text-base">{agent.emoji}</span>

@@ -112,7 +112,7 @@ export default function ReportUpload({ onResult, onBlockchainData }) {
 
   const FileCard = ({ file, onRemove, title, icon: Icon, colorClass, onProcess }) => (
     <div className="flex flex-col gap-3 h-full">
-      <div className="flex flex-col flex-1 bg-white border border-slate-100 rounded-2xl p-5 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] relative z-10 animate-scale-in">
+      <div className="flex flex-col flex-1 bg-white/60 backdrop-blur-md border border-white/60 rounded-2xl p-5 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] relative z-10 animate-scale-in">
         <div className="flex items-center gap-4 border-b border-slate-100 pb-4 mb-4">
           <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-inner shrink-0 ${colorClass.bg} ${colorClass.text}`}>
             {file.type === 'application/pdf' ? <FileText className="w-6 h-6" /> : <Image className="w-6 h-6" />}
@@ -166,7 +166,7 @@ export default function ReportUpload({ onResult, onBlockchainData }) {
             <div
               onClick={() => !loading && reportRef.current?.click()}
               className={`h-full min-h-[160px] border-2 border-dashed rounded-2xl p-5 text-center transition-all duration-300 cursor-pointer relative overflow-hidden flex flex-col items-center justify-center ${
-                'border-slate-300 hover:border-sky-400 bg-white/50 hover:bg-white backdrop-blur-sm shadow-sm hover:shadow-md'
+                'border-slate-300 hover:border-sky-400 bg-white/40 hover:bg-white/80 backdrop-blur-md shadow-sm hover:shadow-md'
               }`}
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-100 to-indigo-50 text-sky-600 flex items-center justify-center mx-auto mb-3 shadow-sm border border-white">
@@ -197,7 +197,7 @@ export default function ReportUpload({ onResult, onBlockchainData }) {
             <div
               onClick={() => !loading && prescriptionRef.current?.click()}
               className={`h-full min-h-[160px] border-2 border-dashed rounded-2xl p-5 text-center transition-all duration-300 cursor-pointer relative overflow-hidden flex flex-col items-center justify-center ${
-                'border-slate-300 hover:border-purple-400 bg-white/50 hover:bg-white backdrop-blur-sm shadow-sm hover:shadow-md'
+                'border-slate-300 hover:border-purple-400 bg-white/40 hover:bg-white/80 backdrop-blur-md shadow-sm hover:shadow-md'
               }`}
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-100 to-fuchsia-50 text-purple-600 flex items-center justify-center mx-auto mb-3 shadow-sm border border-white">

@@ -94,7 +94,7 @@ export default function HealthScore({ result, onUploadClick }) {
   // Empty state if no report uploaded
   if (!result || targetScore === null) {
     return (
-      <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6 medtwin-hover-glow transition-all">
+      <div className="bg-slate-100/60 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-6 shadow-md flex flex-col sm:flex-row items-center justify-between gap-6 medtwin-hover-glow transition-all">
         <div className="flex items-center gap-4 text-center sm:text-left">
           <div className="w-16 h-16 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-sky-500 shrink-0 mx-auto sm:mx-0">
             <Activity className="w-8 h-8" />
@@ -121,7 +121,7 @@ export default function HealthScore({ result, onUploadClick }) {
   const strokeDashoffset = circumference - (animatedScore / 100) * circumference;
 
   return (
-    <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm space-y-5 medtwin-hover-glow transition-all">
+    <div className="bg-slate-100/60 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-6 shadow-md space-y-5 medtwin-hover-glow transition-all">
       <div className="flex items-center justify-between border-b border-slate-100 pb-3">
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-sky-500" />

@@ -131,7 +131,7 @@ export default function PatientDashboard() {
           </AnimatedSection>
         ) : currentPath === '/patient/billing' ? (
           <AnimatedSection delay={100}>
-            <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm space-y-4">
+            <div className="bg-white/40 backdrop-blur-md border border-white/60 rounded-2xl p-6 shadow-sm space-y-4">
               <div className="bg-amber-50 border border-amber-200 text-amber-800 text-xs p-3 rounded-xl flex items-center gap-2">
                 <span className="font-bold">Demo Note:</span> This section is currently displaying mock data for demonstration purposes.
               </div>
@@ -165,7 +165,7 @@ export default function PatientDashboard() {
             </div>
           </AnimatedSection>
         ) : loadingInitial ? (
-          <div className="bg-white border border-slate-200/80 rounded-2xl p-12 text-center shadow-sm space-y-3">
+          <div className="bg-white/40 backdrop-blur-md border border-white/60 rounded-2xl p-12 text-center shadow-sm space-y-3">
             <Loader2 className="w-8 h-8 animate-spin mx-auto text-sky-500" />
             <h3 className="text-slate-900 font-bold text-sm">Loading Health Dashboard...</h3>
           </div>
@@ -235,7 +235,7 @@ export default function PatientDashboard() {
 
         {/* Functional Blockchain Verification Footer Banner */}
         <AnimatedSection delay={300}>
-          <div className="bg-white border border-slate-200/80 rounded-2xl p-5 flex items-center justify-between flex-wrap gap-4 shadow-sm medtwin-hover-glow transition-all">
+          <div className="bg-white/40 backdrop-blur-md border border-white/60 rounded-2xl p-5 flex items-center justify-between flex-wrap gap-4 shadow-sm medtwin-hover-glow transition-all">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
                 <Shield className="w-5 h-5" />
